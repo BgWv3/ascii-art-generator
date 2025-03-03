@@ -28,7 +28,7 @@ image_to_ascii(image, num_rows, model, aspect)
 * `num_rows`: The row height of the finished art.
 * `model`: A ten character style used when generating the art.
 
-    ```json
+    ```python
     ascii_models = {
         "detailed": (f"@%#*+=-:. "),
 
