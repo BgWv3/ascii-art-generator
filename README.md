@@ -30,18 +30,24 @@ image_to_ascii(image, num_rows, model, aspect)
 
     ```python
     ascii_models = {
-        "detailed": (f"@%#*+=-:. "),
-
-        "simple": (f"#*+-/\\|_ox"),
-
-        "blocky": (f"█▓▒░#@%XO0"),
-        
-        "lined": (f"─│┌┐└┘├┤┬┴")
+        "blocky": "░▒▓█#@%XO0",
+        "shaded": "□◀▼▲■░▒▓█",
+        "braille": "⠀⠁⠂⠃⠄⠅⠆⠇⠈⠉",
+        "symbols": "•○◘♂♀♪♠♣♦♥",
+        "geometric": "◯○◌▶◀▼▲●",
+        "rounded": "○◯◌◍◎◉●●",
+        "detailed": " .:-=+*#%@",
+        "simple": "-+/\\|_ox#*",
+        "techy": "0000111111",
+        "punctuation": '!\\"#$%&)(*',
+        "nature": "~~^^**++==",
+        "alphanumeric": "abcdefghij",
+        "emoticons": ":-) ;-) :-("
     }
     ```
 
 * `aspect`: The aspect ration used to mitigate the lack of font uniformity.
-  * A float value greater than zero and less than or equal to 1
+  * A float value greater than zero and less than or equal to one.
 
 ### Running the Generator
 
@@ -58,6 +64,7 @@ image_to_ascii(image, num_rows, model, aspect)
     * *The aspect ration may be an unknown value. Lower values will widen the end result, while higher values will thin out the end result.*
 
 ### Sample Output
+
 *Sample files can be found in the **sample** directory.*
 
 #### Parameters Used
@@ -70,7 +77,7 @@ image_to_ascii(image, num_rows, model, aspect)
 
 #### Output
 
-```txt
+```
 ==---------------------------------------------------------------------------------------------------------==================
 ----------------------------------------------------======++----------------------------------------------------=============
 ----===----::::-----------------------------:--=+*#%%%##*####+------------------------------------------------------------===

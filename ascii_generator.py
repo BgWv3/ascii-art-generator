@@ -36,16 +36,23 @@ def image_to_ascii(image_path, row_hieght, model, aspect):
     img = img.resize((new_width, new_height))
 
     ascii_models = {
-        "detailed": (f"@%#*+=-:. "),
-
-        "simple": (f"#*+-/\\|_ox"),
-
-        "blocky": (f"█▓▒░#@%XO0"),
-
-        "lined": (f"─│┌┐└┘├┤┬┴")
+        "blocky": "░▒▓█#@%XO0",
+        "shaded": "□◀▼▲■░▒▓█",
+        "braille": "⠀⠁⠂⠃⠄⠅⠆⠇⠈⠉",
+        "symbols": "•○◘♂♀♪♠♣♦♥",
+        "geometric": "◯○◌▶◀▼▲●",
+        "rounded": "○◯◌◍◎◉●●",
+        "detailed": " .:-=+*#%@",
+        "simple": "-+/\\|_ox#*",
+        "techy": "0000111111",
+        "punctuation": '!\\"#$%&)(*',
+        "nature": "~~^^**++==",
+        "alphanumeric": "abcdefghij",
+        "emoticons": ":-) ;-) :-("
     }
 
-    ascii_chars = ascii_models.get(model, ascii_models["detailed"]) # Default to detailed
+    ascii_chars = ascii_models.get(model, ascii_models["detailed"][0]) # Default to detailed
+    char_count = ascii_models.get(model, (ascii_models["detailed"][1]))[1] # Default to detailed
 
     # Getting key value for chosen model
     value_to_find = ascii_chars
