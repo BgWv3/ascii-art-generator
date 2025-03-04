@@ -2,6 +2,15 @@
 
 A simple yet customizable Python application that converts images into ASCII art. The app allows users to adjust the row height and font aspect ratio to create a personalized visual representation of their images in ASCII. Perfect for generating text-based art with flexible formatting options.
 
+## Menu
+
+* [Setup](#setup)
+* [Generating ASCII Art](#generating-ascii-art)
+* [Running the Generator](#running-the-generator)
+* [Sample Output](#sample-output)
+  * [Example 1: Techno Cowboy](#example-1)
+  * [Example 2: Tree](#example-2)
+
 ## Setup
 
 1. Clone the repository
@@ -42,7 +51,10 @@ image_to_ascii(image, num_rows, model, aspect)
         "punctuation": '!\\"#$%&)(*',
         "nature": "~~^^**++==",
         "alphanumeric": "abcdefghij",
-        "emoticons": ":-) ;-) :-("
+        "emoticons": ":-) ;-) :-(",
+        "Spoitl": "$SPOITL_  ",
+        "punctuation": '!"#$%&\'()*+,-./:;<=>?@[\\]^_`(|)~',
+        "alphanumeric": "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
     }
     ```
 
@@ -67,7 +79,7 @@ image_to_ascii(image, num_rows, model, aspect)
 
 *Sample files can be found in the **sample** directory.*
 
-#### Parameters Used
+#### Example 1
 
 |image|num_rows|model|aspect|
 |-----|:------:|:---:|:----:|
@@ -75,7 +87,7 @@ image_to_ascii(image, num_rows, model, aspect)
 
 <img src="sample/techno_cowboy.jpg" height="200px">
 
-#### Output
+##### Output
 
 ```
 ==---------------------------------------------------------------------------------------------------------==================
@@ -129,3 +141,70 @@ image_to_ascii(image, num_rows, model, aspect)
 %%%%%%%%%%%%%%%%%%%%###########################%@##%%###%%%%%%%%%%%@%%@%#**#%%%%%%%%@%#*#####################%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%####################@%%%%%%#%%%%%%%%%%%%%%#*##*######%%%@@%##%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 ```
+
+#### Example 2
+
+|image|num_rows|model|aspect|
+|-----|:------:|:---:|:----:|
+|tree.jpg|50|bourke|0.4|
+
+<img src="sample/tree.jpg" height="200px">
+
+##### Output
+
+```
+''''''''~(||]!"<?i~unucu\x1rzY|!{|_~1|}i!il;l^I<l<~--){1|1]_[[+;l^';::, :l>?-?~>I'...........''.................... .........
+''''''`^\jnnf{fXXcYUXYzYCCJJCYu}rj/nzcx|fnrj)]1|||(tjjrrrjf//f|[1?l<}[<!-11}[_,:' .. .' .' .. .^^`'..........................
+''''''^,,,tvjfnzUCCJJJCCCCJJUUzzzuccvuvnxnxnnrrxnnnnxrrrrrjjrjjtrnt\\|||(())1->_,"''"!<!!!,,,;i~<I,"^'''..... ...............
+''''''",!]tvnfczXXXYzXUYzYUJUXYYYYzzcXYvnnnnnxxxnuunuuuunrrrjuzzzvuxrrrjjt\|(}1t[<:^~[{_-[[-<--+i!!>llil,^...................
+'.....'^;]1)|vczcuuvnnuvuzYzUYCLQQQLJUJcuuuuuuuuzzzXYUQO0QCQYJQ0JYUXUzvvunnjt\\/){(||(()[[}}]]?--_+lIlI;"....................
+.. .,+(n/jczucuuuuvzYcczcvcXYYUUCQ0QLCQQQQJJUYYYJJCCCQLCCCQOmOZO0QQCUUYUXzcvnj/trzYutjt\|)))1}}[?+<>l:"^,^...................
+.:_)xULLLLUYYzzccvvYQYUccczXccXYC00ZmmZwqwQJJUJUCLQ000UYULCQ0Q0ZZQLLCLLQ0CzvvcvXXJJYnnrf/||(()1{[??+~>i!!l;:^''''''''''''''''
+,+jCLLCLLQQCUJXzzzzzYYYYcvvcXYJQQ0ZwwOqbddqwwqpmZqqbbpmqpqqpppbbdZLQQOZQJ000O0Qm0QZJYzvnrff\\\|(((]<><+_+l;:^``''''''`'''''''
+_fYCJCCCCCCUXXzXYXYYXzC00LCJLQOZOOwwwdbkkkkhhhhhkkkkkhhkkbkhahhhkbbqwOQOQ00wqqqqqpbw0YJJLCJzrjft//|1}[~i+!"^'''``````````''''
+tzUUYvnuccvvzzczXYUUUUCLZmZQOwdqqbdbkkwphbkbbkkhkhhkkkhhhkkdpbkkkkbpmCCwmwZwppwpbbbkbmCQQLYYYcnrjf/(1{]]{}{[!lI;'''``````'```
+UUzczzvvvvvvccccU0CLL0mwqdbppbbbbkkkkbddkbkpqObahdbkkkbbpbkdmddqCUwpppdqmq0OwZmdpqppdkbpQ0QUJLOQJcxj\11{{))\){-II",,`''''''''
+xYXzzzvvccvYCUJCQmZppdbkbkkkkdqbkbkkkpZmCZqJ0kohpmdpqmZpQznCqCznu(vOpwYYLm0OmZZOOpbkkkkhbwZmwmpwZ0Yvnjt/())({11}[+[}>"""'''''
+[uczzcvzC0OZm0mmqppkkkkhhhkkkwLqbZZbpqmc\JZcbabYucQZUu}JJuXc(}{?+|CZu|trYUUvcXQQLzvYmpqwqpkhkkpqpmOQJLUUvj\||)|(|\|({>",^''''
+ucczcccz0ZmOmqqpbkkkhhhhhhkbbpZ0quvmcXX)>fOCob(!}t/t1~I[qQ)~Il;)zOJr(]>I+\vunj)-[1(|vcuzXCqppbkbpmZwmwwmZ0CUcnj/|/tt|-<<l''''
+YzzYYYUCCwpmmppbkkkkbpbkwmm0Qp0dCcc0YJ1!;]waaQ,",i!;I;"rC!`;1Ynr}!:;I~\xt[<<])|()tuxjt(/fnczuQqq0QU0OmmqqdpqZJccut\\(/tf->`''
+JYC0mZmwmqbkkkkkhhkkbwkdYczzjjqmxu\zQt)>:lLob1'```^`."YY`:)0kX-_}tuXJJzr\()||/jt)]~<<,'.':?\)?nQmpqwqpwwqddOm0UJUvf{+}|f[++^'
+OQZwwqpbpdbkhhhkkbpbdphOLc]->~\0?i;Y>,"``:womI'````'lCw?jpop0vnf{~I,"``'''..  .^"Ii<-[}}[?<l!I-)cJUYCw0JOXn}}fzzf[||i;I<]}<:;
+mmqqpbkkkkkkkkhkpppddZkZvnt{_iI\Y^}u````.-ohQ!'``' >qaZqwz1~l"'...''''''''`''''''''..''```'.. .,~>;!>+!<}~;>>!"^";)(!^^"I"''^
+wwdbkkkhkkkbZqkad0UrcYhOt/t([;,^r0QI`^^^'YoZt`'''ltpbZX\~^..''''''''''''''''''''''`''''''''''''''^,""'^^'^l~~!l`'. ''`^^"''''
+qqdkhkkhhbdpZQmhoO1++jhY>l><i-+^:mL'^^^'>kbU_ ^+npbX}>"..'''''''''''''''''''''''''''''...''.....'....'``'''^,I,'''''''''.''''
+bbbkbbbqpdZmpwUJka0/+}wx^```^",`IcdI'`'lOomc>|0dwX-^ .'''''''''.'.'''''''''''.''.'.................'........ .......'.''''...
+pddpZmwQQkqwOQ0jnq*q]:QX^``'''```<mc' ILokdmwbLj?; .'.'.''.'.........'''.''..................................................
+dpwpwZwmqbk0zcnL?indorxmi.`'''''' ;puiChdpm0z|<^  ............................................... ...........................
+bbbbbbdwL0hZz|>|c^;_ndwwvi"'...... c#ZddOJx};. .................................................. ... . .....................
+kbkbbqmqZUOhj|}_xj,  IukpJ} ...... n#hqJu|l  ............................................ .....  ............................
+hkpZQUxjvnLhY;"i+jn_:  -mqc[^.''' >wawCn]` .............................................   ..................................
+ppbc}vc?I:_vkc`   ,-\j+ -hdU~ .. }b*wUr-...................................   .......    ... ................................
+YYUZz{}[`^'`(w{ .'.  Ijx1Ohmzi ^rkbZzj]' ..................................^:!^.....  :_i`         ..........................
+zcxnrnt>^:^''cQ! ....  ;1w*bZY{Ubdmct?' ....................................";..      .,`       "!;' ..................  ....
+xf\tf\vJXz1, :mcl .....  !qadwwpZmCj+. ................................  ...  .         'l~,    .,^ ............   ...   ....
+iI"`:"'';?jXY|rqvi ...... noobOZ0zx+. .....................................     ..      .''`       ..........     ......  . .
+,,'..'..   ^[CddOxI  .... -kobwZct?. .............................................                   ........      .... .
+.'.''''..''  .+Yhdz+'  .  ih*bZUf}' .............................................. ....   ..         ........        .      .
+'''''''......   -ZhOr>'   xaodQj|; ...........................................................      ............    ..      .
+...............  ;maqLx1i?padZcj}.............................................................    ..............     .      .
+ ................ iC#bwmOZdwmCu|; ..............................................................................            .
+.................. "Y#hbbqZOOXt{' ...............................................................................  ......   .
+................... 'foahdqqOc/_ ........................................................................................
+.................... !kookdpCu|^ ........................... ..... ......................................................
+ '^^'`''''.''..... . !pa*abmzr- ..........   .............'''.''''...  .'''..................................................
+'^,:;;:,^^^""^"""^`. "Z***dCcj! ......'...''''''''''. .'`^^^^``''''.''''````'''''....................'...''...............''.
+;l!!!!!lI::;;::::::^'+h***qYCu<``^"^^""`^":::::,""^```^^^^^^^^^^^``'`^^^^````''`^`''..'''''''''''''''''''''''.....''...''`^`'
+!iiiiiiiii!!!<>!!!i!;u#**kZOmX[;!!!l;ll;;III;;;;;:::::::::::,,,::::,,,",,""",,,,,,,"^^^`````````^^^^^^^^^^^^""""",::::,::;;I;
+!i>i~<i<>>_<1_i!!!~>1p**okmbq0j<-?_>l!!!!llllIlIIlIII!llllllII;;;;IlI;;;;;;;;IIlIIII;;I;;;;;;;;;;::::;;;;;;Illlll!!!!!!!!!ll!
+l!!?}(~_]+1Yj)[]+-<za****dqkbmQ/([>+i<-~>!>i!~<i!l!i!+!!!i!llll!>>~!!!!ii>ii>>>>>>>>>><<<<<<~~~~<<<<>>><<>><>>>>>>>>>><<><~++
+]?}[|UvxjtQqJcr)uUm*oo**appbkpqZQcc()f()}+}|?|-??[??-[+_-?}+_-_}]}-?___--?____---?-_-?-??--??-????]]?[[}}[})|)1(((()(\|)1{{{}
+O0LQzZddZZkpqdZCpo*ooahaakbhakbakZOzccnvrffvxf(jrf/\rfjf/\f|nxrt/|(((){}}{11}})}|(||\)(f)1)\\\()|||\|\fjxnxnczccccvcccvnxxxxr
+dkkhakkkhoakkha*aaaahahahkkdbppbhbpm00QcxnrfjfuczvzzzvxcucvcuzzczzvnxrxxxnunnnnnuvczvcXzvccXXzzzcvvvvvcXULYzXXUXXXzYUXXzzzzzz
+bkhaaaaaoo****aoaahhhkdpdwmZZZZZmwwmZmZO00QQLLQQLQQQQLCJJJJJJCCLLCJJUYJJUUUYYYUUYYYYYYYYYYYYYYUUCCCJJJQQZQLCCLQQLLLQJJCJJUUJY
+aaaaaaaaooaahkbbbbbbbdddpbddpqpqqqqqwwwwmmZZZZZZZZZZOZZO00OOZOOOOO000000QQLLCCCCCCCLLCCLCLLCCCCLLLLLL0000QQQ00Q00Q0OQ0O0QQQLQ
+```
+
+## Resources
+
+* [Paul Bourke: Character representation of grey scale images](https://paulbourke.net/dataformats/asciiart/)
